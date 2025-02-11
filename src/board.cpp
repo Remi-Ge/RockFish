@@ -29,15 +29,15 @@ Board::Board(std::string fen) {
 
 void Board::show() {
     for (int rank = 0; rank < 8; rank++) {
+        std::cout << "+---+---+---+---+---+---+---+---+" << std::endl;
         for (int file = 0; file < 8; file++) {
             int index = rank * 8 + file;
-            if (position.find(index) != position.end()) {
-                std::cout << position.at(index).getNotation() << " ";
-            } else {
-                std::cout << ". "; // empty
-            }
+            std::cout << "| " << ((position.find(index) != position.end()) 
+                    ? position.at(index).getNotation() 
+                    : ' ') << " ";
         }
-        std::cout << std::endl;
+        std::cout << "|" << std::endl;
     }
+    std::cout << "+---+---+---+---+---+---+---+---+" << std::endl;
 }
 
