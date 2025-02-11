@@ -3,6 +3,9 @@
 
 #include <map>
 #include <string>
+#include <vector>
+
+using Direction = std::pair<int, int>;
 
 enum class PieceType {
     empty,
@@ -22,7 +25,9 @@ struct PieceInfo {
 
 class Piece {
 private:
-    static const std::map<PieceType, PieceInfo> pieceRepresentations;
+    static const std::map<PieceType, PieceInfo> PIECE_REPRESENTATIONS;
+    static const std::vector<Direction> DIRECTIONS;
+    static const std::vector<Direction> KNIGHT_DIRECTIONS;
 public:
     Piece(char notation);
     PieceType type = PieceType::empty;
