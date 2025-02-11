@@ -27,6 +27,7 @@ public:
     Piece(char notation);
     PieceType type = PieceType::empty;
     bool isWhite = true;
+    char getNotation();
 };
 
 #endif

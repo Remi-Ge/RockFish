@@ -3,7 +3,7 @@ CXX = g++
 CXXFLAGS = -Wall -std=c++17
 
 # Definitions of source and object files
-SRC = src/main.cpp src/piece.cpp
+SRC = src/main.cpp src/piece.cpp src/board.cpp
 OBJ = $(SRC:.cpp=.o)
 EXEC = build
 

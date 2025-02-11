@@ -25,3 +25,8 @@ Piece::Piece(char notation) {
         }
     }
 }
+
+char Piece::getNotation() {
+    PieceInfo info = pieceRepresentations.at(this->type);
+    return this->isWhite ? info.whiteNotation : info.blackNotation;
+}
